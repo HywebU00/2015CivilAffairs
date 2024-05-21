@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* CSS Document */
+form{margin:0;padding:0;font-size:1em;}
+form table{border:none;border-collapse:collapse;margin:0 auto;line-height:1.6;max-width:90%;}
+form caption{text-align:left;font-size:1.08em;padding:0 0 .8em;color:#000;}
+form th,
+form td{padding:.5em 0;vertical-align:top;}
+form th{text-align:right;font-weight:normal; max-width:15em;padding-right:.4em;line-height:2.5em;}
+form td p{line-height:120%;margin:.3em 0 .5em;}
+form td label{display:inline-block;margin:2px 1em 7px 0;}
+input,
+select,
+textarea{font-size:1em;margin:0;vertical-align:top;}
+input[type="text"],
+textarea{-webkit-appearance: none;}
+input[type="radio"],
+input[type="checkbox"]{margin-right:4px;vertical-align:-8%;}
+td>input[type="radio"],
+td>input[type="checkbox"]{margin-left:1em;}
+td>input[type="radio"]:first-child,
+td>input[type="checkbox"]:first-child{margin-left:0;}
+input.text,
+input[type="text"],
+input[type="password"],
+textarea,
+input[type="file"],
+select{border:solid 1px #bbb;height:2.4em;line-height:2.4;padding:0 .4em;margin:.1em 4px .1em 0;}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input.text:focus,
+textarea:focus,
+input[type="file"]:focus,
+select:focus{border-color:#67e0ff;outline:none;box-shadow:#67e0ff 0 0 0 3px;}
+select{outline:none; max-width:100%;}
+textarea{min-height:8em;line-height:1.6;}
+input.long{width:360px;}
+input.short{width:120px;}
+button,
+input.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"]{height:2em;line-height:1.3em;margin:0 3px 0 0;cursor:pointer;border:none;}
+button:focus,
+input.button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus{outline:none;}
+
+.center .buttonDiv{border-top:solid 1px #999;margin:1.5em 16px 0;padding:1.5em 0 0;text-align:center;}
+.center .buttonDiv input[type="submit"], 
+.center .buttonDiv input[type="button"], 
+.center .buttonDiv input[type="reset"]
+{-webkit-appearance: none;display:inline-block;height:2.4em;line-height:1.8em;padding-left:16px;padding-right:16px;margin:0 6px 10px;min-width:5em;border-radius:.4em;background:#7faf0b;color:#fff;font-size:1.06em;box-shadow:#587320 0 4px, #112 0 6px 0, rgba(0,0,0,.5) 0 6px 6px 1px;transition:.1s;}
+.center .buttonDiv input[type="submit"]:hover,
+.center .buttonDiv input[type="button"]:hover,
+.center .buttonDiv input[type="reset"]:hover{background-color:#99c300;}
+.must{margin-right:3px;color:#C30;}
+
+/*---------------forwardForm */
+.qp,
+.forwardForm {border:1px solid #ccc;margin:0 12px 40px;padding:2em 0;}
+
+.forwardForm th{white-space:nowrap;}
+.forwardForm input[type="text"],
+.forwardForm input[type="file"],
+.forwardForm input.text,
+.forwardForm textarea{width:30em;}
+.forwardForm input.short,
+.forwardForm input.captchaTxt{width:8em;}
+.forwardForm textarea{height:9.5em;overflow:auto;}
+.forwardForm select { max-width:31em;}
+.forwardForm caption .must{float:right;font-size:.8em;color:#c00;}
+.refresh{display:inline-block;vertical-align:top;margin:5px 0 0 6px;}
+.refresh a{display:block;background:url(../images/btn_refresh.png) no-repeat 0 0;padding:10px 0 12px 37px;font-size:1em;letter-spacing:0;text-decoration:none;}
+.forwardForm form caption { display:none;}
+.forwardForm td{width: 30em;}
+.forwardForm td p,
+.forwardForm td ol {line-height: 1.5;color: #0888aa;}
+.forwardForm a{color: #390;text-decoration: underline;}
+.forwardForm a:hover,
+.forwardForm a:focus{text-decoration: none;color: #e80;}
+
+.extraBtn{clear:both;margin:0 12px 0 0;}
+.extraBtn a{display:inline-block;margin:0 2px 6px;min-width:0;border-radius:2em;text-align:center;font-size:1em;line-height:2.2em;height:2.2em;padding:0 1em;background-color:#fff;color:#666;text-decoration:none;border:solid 1px #ccc;box-shadow: #aaa 0 1px 6px;transition:.2s;}
+.extraBtn a:hover,
+.extraBtn a:focus{background:#0984a3;color:#fff;border-color:#0984a3;box-shadow: none;}
+.note a{word-break:break-all;}
+
+/* 意見信箱進度查詢*/
+.note{margin:0 0 3em;padding:1em 5% 2em;line-height:1.8;background:#fff;word-break: break-all;}
+.note h2{font-size:1.2em;margin:0 0 1em;}
+.note ol{margin:0;}
+.note li{margin-bottom:1.2em;}
+
+.forwardForm .extraBtn { float: right;margin: -1.2em 12px 0; }
+.forwardForm .note{clear: both;position: relative;}
+.forwardForm .note .extraBtn{margin:0 5px 0;position:relative; float: none;}
+.forwardForm .note .extraBtn a{color:#ffc;text-decoration:none;}
+.forwardForm .note:before{content:'';position:absolute;width:96%;height:20px;border-radius:50%;bottom:0;left:2%;background:#ccc;box-shadow:rgba(0,0,0,.4) 0 0 20px;z-index:-1;}
+
+a[title="換一組驗證碼"] ,  a[href="javascript:resetCaptchaA();"]
+{ display:inline-block; margin:-8px 3px 5px;width:40px; height:40px;background:#F90 url(../images/refresh.png) no-repeat 8px center; border-radius:50%;vertical-align:middle;}
+a[title="換一組驗證碼"]>img, a[href="javascript:resetCaptchaA();"]>img { display:none;}
+input.captchaTxt { margin-bottom:1em;}
+/*----------------------qp*/
+.center .qp header{margin:0 3px 3px;border:none;}
+.qp input[type="text"]{width:24em;}
+.qp input.short{width:8em;}
+.qp th{min-width:6em;max-width:9em;white-space:nowrap;}
+.qp table{width:44em;margin:0 auto;}
+.qp td input[value="清除"]{width:24px;height:24px;margin:0 8px 0 0;color:transparent;background:transparent url(../images/btn_reset.png) no-repeat;border:none;}
+/*----------------------qp forwardForm 共用*/
+.center .qp header, .center .forwardForm header{margin:0 3px 3px;border:none;}
+
+
+.magList{margin:0 auto;}
+form td .magList p{margin:0 0 1.5em;line-height:1.6;}
+.magList label{display:block;margin:.5em 0;font-size:1.2em;}
+
+@media (max-width:1000px){
+	input:focus, button:focus{outline:none;}
+
+	.qp ,
+	.forwardForm {margin:0 0 40px;}
+	.forwardForm .extraBtn{display:none;}
+
+	.center .buttonDiv input[type="submit"], 
+	.center .buttonDiv input[type="button"], 
+	.center .buttonDiv input[type="reset"]{box-shadow:#587320 0 7px, #112 0 10px 0, rgba(0,0,0,.5) 0 11px 8px;transition:.1s;}
+
+}
+@media (max-width:800px){
+	form table{max-width:none;}
+	form tr{display: block;}
+	form th, form td{display:block;text-align:left;font-weight:normal;}
+	form th{padding-bottom:0;line-height:1.6;}
+	form td{padding-top:0;}
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	input.text,
+	input.long ,
+	input.short,
+	textarea,
+	select {box-sizing:border-box;max-width:none;height:2.4em; line-height:2.4em;}
+	textarea { min-height:12em; line-height:1.6;}
+	input[type="radio"],
+	input[type="checkbox"]{font-size:1.2em;}
+
+	.note{padding:1em 0 2em;width: auto;}
+	.qp ,
+	.forwardForm {padding-top: 0;margin:0 0 20px;border: none;}
+	.forwardForm form { margin:0 auto; padding:0; border:none; width: 96%; }
+	.forwardForm form table{width: 100%}
+	.forwardForm td{width: auto;}
+	.forwardForm input[type="text"],
+	.forwardForm input[type="file"],
+	.forwardForm input.text,
+	.forwardForm textarea,
+	.forwardForm select {width:auto;}
+
+	.center .buttonDiv{ margin-left:0; margin-right:0}
+	.center .buttonDiv input[type="submit"], 
+	.center .buttonDiv input[type="button"], 
+	.center .buttonDiv input[type="reset"]{box-shadow:#587320 0 8px, #112 0 12px 0, rgba(0,0,0,.5) 0 13px 8px 1px;transition:.1s;}
+
+	img#imgCaptcha{width:280px;height:auto;}
+	img#imgCaptcha + input[type="text"] { margin-left:8px; vertical-align:top;height: 2.4em; line-height: 2.4em;}
+}
+@media (max-width:600px){
+
+
+}
+
+
+

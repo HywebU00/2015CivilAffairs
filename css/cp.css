@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* CSS Document 台中民政局 */
+/*
+.share{position:fixed;left:0;top:190px;text-align:center;background:#fff;padding:5px;z-index:9000;box-shadow:rgba(0,0,0,.3) 2px 4px 10px 1px;}
+.share h1{font-weight:normal;font-size:1em;}
+.share ul{list-style:none;margin:3px 0 0;padding:0;overflow:hidden;}
+.share li{margin:0;padding:0;width:48px;}
+.share li a{display:block;width:48px;height:48px;overflow:hidden;}
+.share li a img{width:48px;height:48px;}
+.share li.close{ display:none;} 
+*/
+
+.share{position:fixed;right:0;top:236px;text-align:center;background:#fff;color:#727d7f;padding:5px;z-index:9000;box-shadow:rgba(0,0,0,.4) -1px 3px 10px 1px; min-height: 3.2em;}
+.share a{text-decoration: none;}
+.share>span{display: block;font-weight:normal;font-size:1em;line-height: 1.1;margin:0; padding:0;color: #000;}
+.share ul{list-style:none;margin:3px 0 0;padding:0;overflow:hidden;}
+.share li{margin:0;padding:0;width:48px;}
+.share li a{display:block;width:48px;height:48px;overflow:hidden; }
+.share li a img{width:48px;height:48px;}
+.share li.close{display:none;} 
+.share .after {position: absolute;left: 2px;bottom: 1px;}
+.no-js .share{display: none;}
+
+.cpArticle{padding:12px;margin:0;line-height:1.8;font-size:1.1em;overflow:hidden;}
+.cpArticle p{line-height:inherit;margin:0 0 1em;padding:0;}
+.cpArticle figure{float:left;width:400px;margin:0 1em 1em 0;padding:9px;border:1px solid #ccc;box-shadow:rgba(0,0,0,.3) 0 1px 3px;background: #fff}
+.cpArticle figcaption{line-height:1.5;margin:9px 0 0;display:block;color:#888;font-size:.94em;}
+.cpArticle figcaption:empty{display:none;}
+.cpArticle figure img{display:block;width:400px;height:auto;margin:0 auto;}
+/*---table*/
+.cpArticle table{width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;color:#111;}
+.cpArticle table.noBorder{width:auto;margin:2em;border:none;}
+.cpArticle table caption{font-weight:bold;text-align:left;font-size:1em;padding:.4em .5em;text-align:left;}
+.cpArticle th,
+.cpArticle td{vertical-align:top;padding:.4em .5em;border:1px solid #ccc;}
+.cpArticle .noBorder th,
+.cpArticle .noBorder td{border:none;padding:0}
+.cpArticle th{color:#888;font-weight:normal;}
+.cpArticle th[scope="row"]{text-align:right;vertical-align:top;width:15%;}
+.cpArticle th[scope="col"]{text-align:center;vertical-align:middle;}
+.cpArticle .list th,
+.cpArticle .list td { text-align:left !important;}
+/*---ul , ol*/
+.cpArticle ul,
+.cpArticle ol{margin:.5em 0 1em 2em;padding:0;}
+.cpArticle ul li,
+.cpArticle ol li{margin:0 0 .5em 0;}
+.cpArticle .gmap{margin:2em 0;}
+.cpArticle .gmap iframe{display:block;padding:0;margin:0 auto;width:100%;height:600px;border:none;}
+.no-js .cpArticle .gmap iframe {display:none;} 
+
+.videoPlay{margin: 12px;min-height:32em;}
+.videoPlay object{float:left;margin:0 1.5em 2em 0;height:auto;}
+.videoPlay embed{display:block;max-width:100%;}
+.videoPlay object > a{display:block;font-size:1.3em;margin:.6em 0;}
+/*-------------------------------------attachment 附件*/
+.attachment,
+.seeAlso{clear:both;overflow:hidden;margin:30px 12px;padding:0 0 25px;}
+.attachment ul,
+.seeAlso ul{margin:0 3px;padding:0;list-style:none;line-height:150%;font-size:1em;}
+.attachment li a:hover,
+.seeAlso li a:hover{text-decoration:underline;}
+/*-------------------------------------*/
+.attachment h3,
+.seeAlso h3{font-size:1.1em;margin:0 0 .6em;padding:0 0 2px;letter-spacing:5px;border-bottom:2px solid #afbbc2;}
+/*-------------------------------------附件：檔案下載*/
+.attachment .filename li{margin:.1em 0;padding:.6em 0 .6em 36px;border-bottom:1px dotted #afbbc2;background:url(../images/icon_attachment.png) no-repeat 5px .7em;background-size:20px;}
+.attachment .filename li:only-child{border:none;}
+
+/*file type icon*/
+/*.attachment .filename li span{margin-left:.2em;}
+.attachment .filename li .fileType{vertical-align:-20%;vertical-align:-30% \9;}*/
+.fileType,
+.fileSize{display:inline-block;margin:0 .2em;padding:0 .4em;min-width:2.4em;height:1.7em;line-height:1.6em;font-size:1em;border-radius:4px;vertical-align:middle;text-align:center;}
+.fileSize{color:#777;border:1px solid #ccc;box-sizing:border-box;}
+.fileType{font-family:monospace, "Courier New", Courier, monospace;color:#fff;font-weight:normal;}
+.fileType.zip{background:#444;}
+.fileType.pdf{background:#c00;}
+.fileType.doc{background:#1f609e;}
+.fileType.xls{background:#297c17;}
+.fileType.ppt{background:#ec7500;}
+.fileType.jpg{background:#78b410;}
+.fileType.mp3{background:#6747b1;}
+.fileType.mov{background:#55bbfd;}
+.fileType.txt{background:#999;}
+.fileType.other{background:#ddd;color:#444;}
+
+/*-------------------------------------附件：相關圖檔*/
+.attachment .images{list-style:none;margin:0;padding:0;overflow:hidden;}
+.attachment .images li{position:relative;float:left;overflow:hidden;line-height:16px;margin:0 10px 10px 0;padding:0;text-align:center;}
+.attachment .images li a{display:block;width:200px;height:200px;}
+.attachment .images li a:hover{text-decoration:none;}
+.attachment .images li img{display:block;width:200px;height:200px;object-fit:cover;margin:0 auto;}
+.attachment .images li p{position:absolute;left:0;bottom:-86px;margin:0;padding:6px;width:188px;max-height:86px;overflow:hidden;background:rgba(0,0,0,.6);color:#fff;font-size:13px;line-height:19px;text-align:left;transition:.3s;}
+.attachment .images li a:hover p{bottom:0;}
+/*-------------------------------------相關連結*/
+.seeAlso h1{padding:0 0 .3em;}
+.seeAlso ul{list-style:none;margin:0 3px;padding:0;}
+.seeAlso ul li{margin:0 0 8px;padding:0 0 2px;background:url(../images/li3.png) no-repeat 3px 4px;border-bottom:1px dotted #afbbc2;}
+
+.pubInfo{background:#65787b;color:#d0d3d3;margin:30px 0 50px;padding:1.5em 12px .5em;clear:both;}
+.pubInfo ul{list-style:none;margin:0;padding:0;line-height:1.1;}
+.pubInfo li{margin:0 .6em 1em;padding:0;display:inline-block;}
+.pubInfo li em{font-weight:normal;color:#fff;}
+
+.meta{width: 96%;margin:0 auto;}
+.meta table{width:100%;margin:.2em auto;border-collapse:collapse;line-height:1.8;border:2px solid #999;font-size:1em;background: #fff;}
+.meta tr:hover{background:#f6f8f9;}
+.meta th,
+.meta td{vertical-align:top;padding:.7em .5em .6em;border:1px solid #ccc;}
+.meta th{min-width:5em;text-align:right;font-weight:normal;color:#888;}
+.meta td{vertical-align:top;word-break:break-strict}
+.meta td img{max-width:100%;display:block;}
+.meta td a{ word-break:break-all;}
+.meta td iframe {display:block;padding:0;margin:0;width:1000px; max-width:100%;height:600px;border:none;}
+
+.meta ul{list-style:none;margin:0;padding:0;color:#888;line-height:1.5;font-size:1.1em;}
+.meta li{margin:0;padding:.6em 0;border-bottom:1px solid #ccc;}
+.meta li:first-child{border-top:1px solid #ccc;}
+.meta li em{color:#111;margin-left:.1em;font-weight:normal;}
+.meta li em:before{content:'：';color:#888;}
+.meta.resume{overflow:hidden;}
+.meta.resume table{width:68%;float:left;margin:10px 0 0 0;}
+.meta.resume figure{max-width:28%;background:#fff;float:right;padding:5px;margin:10px .8% 20px 0;box-shadow:#999 0 0 7px;}
+.meta.resume figure img{width:100%;display:block;}
+
+/*拍片景點*/
+.album .meta {width:100%;padding:2em 0;}
+.album .meta table {width:99%;margin:0 auto;}
+.album .photoThumb, .album .photoShow {margin:0 -12px;}
+
+.photoThumb{padding:6px 0 5px;background:#444;}
+.photoThumb ul{list-style:none;margin:0; padding:0;font-size:0; text-align:center;}
+.photoThumb li{ display:inline-block;margin:0 1px 1px 0; padding:0;position:relative;}
+.photoThumb li a{ display:block;outline:none; }
+.photoThumb li img {display:block;width:72px; height:72px; object-fit:cover;margin:0;padding:0;}
+.photoThumb li.active:before {content:'';position:absolute;left:0;top:0;width:68px; height:68px;border:2px solid #fff}
+
+.photoShow {position:relative;margin-top:-15px;padding:30px 0 1em;height:560px;}
+.photoShow:hover{background:#f0f2f3;}
+.photoShow li a:hover {box-shadow:rgba(0,0,0,.6) 0 3px 24px;}
+.photoShow li a:hover img {box-shadow:#fff 0 0 0 6px;}
+.photoShow ul{list-style:none;text-align:center;margin:0;padding:0;}
+.photoShow li{position:absolute;left:0;right:0;top:30px;margin:0 auto;padding:0;line-height:1.6;display:none;}
+.photoShow li img{display:block;max-height:500px;max-width:100%;margin:0 auto}
+.photoShow li span{line-height:inherit;display:inline-block;}
+.photoShow li .caption {max-width:100%;margin:8px auto 0;display:block;color:#000}
+.photoShow li .photoCount{background:rgba(255,255,255,.6);color:#888;border-radius:2em;padding:0 .4em 0 .7em;height:2em;position:absolute;right:12px;top:6px;letter-spacing:2px;font-size:.85em;}
+.photoCount:first-letter{font-size:1.25em;}
+.photoShow li:first-child {display:list-item;}
+.photoShow li a{display:inline-block;}
+
+.photoShow .btn{padding:0;margin:0;width:40px; height:64px;position:absolute;top:50%;left:12px;margin:-62px 0 0; border-radius:6px;cursor:pointer;}
+.photoShow .btn.next{left:auto;right:12px;}
+.photoShow .btn:hover{background:rgba(0,0,0,.5)}
+.photoShow .btn:before{content:'';position:absolute;top:17px;width:24px;height:24px;border:5px solid #c9ccce;transform:rotate(45deg);border-top:none;border-right:none;}
+.photoShow .btn.prev:before{margin-left:13px;}
+.photoShow .btn.next:before{transform:rotate(225deg);margin-left:-2px;}
+.photoShow .btn:hover:before{border-color: #fff;}
+
+.ppause{position:absolute;left:-2000px;top:0;width:44px;height:44px;background:rgba(0,0,0,.5);}
+.ppause:before, .ppause:after {content:'';position:absolute;top:12px;left:12px;width:6px; height:20px; background:#df0;}
+.ppause:after {left:26px}
+.ppause.pplay:before{ border:10px solid transparent;border-left:15px solid #df0;width:30px; height:20px;box-sizing:border-box;background:transparent;left:16px}
+.ppause.pplay:after{display:none;}
+
+
+
+.buttons{list-style:none;margin:0;padding:0;}
+.preface{padding:2em 30px 1em;margin:0 12px 1em;overflow:hidden;background:#f3f5f6;line-height: 1.5;}
+.preface h1{float:left;margin-bottom:1em;font-size:1.8em;font-weight:normal;}
+.page + .preface{margin-top: -40px;margin-bottom: 40px;}
+.preface article{font-size:1.1em;text-align:justify;}
+.preface h2{float:left;margin-bottom:1em;font-size:1.8em;font-weight:normal;}
+.preface p{margin:1.2em 0;line-height: inherit;}
+.preface li + li{margin-top: .4em;}
+.preface ol{list-style:decimal;}
+.preface ul{list-style:disc;}
+.preface ul,
+.preface ol{margin:1.2em 0 1.2em 0;line-height: inherit;}
+.preface .buttons{float:right;overflow:hidden;}
+.preface .buttons + *{clear:both;}
+.preface .buttons li{margin:0;padding:0;}
+.preface .buttons li.extraBtn{clear:none;}
+.preface .info,
+.preface .count{margin:1.3em 0 0;display:inline-block;color:#888;}
+.preface .info em,
+.preface .count em{color:#000}
+.preface .info em{font-weight:normal;}
+.preface .count{float:right;}
+.preface .info li,
+.preface .count li{margin:0 0 .8em 1.4em;display:inline-block;}
+.preface .info li:first-child,
+.preface .count li:first-child{margin-left:0;}
+.preface .count li.hot{padding-right:20px;background:url(../images/hot.png) no-repeat right 0;}
+
+/*當期、單本雜誌*/
+.eMag{position:relative;border:1px solid #afbbc2;padding:1em;margin:12px 12px 3em;overflow:hidden;box-sizing:border-box;}
+.eMag h1{font-size:1.8em;margin:5px 0 .5em;line-height:1.1;font-weight:normal;clear:right;}
+.eMag .contents{clear:both;padding:1em 0;-moz-column-count:2;-moz-column-gap:4em;-moz-column-rule:1px solid #ddd;-webkit-column-count:2;-webkit-column-gap:4em;-webkit-column-rule:1px solid #ddd;column-count:2;column-gap:4em;column-rule:1px solid #ddd;}
+.eMag .meta ~ .contents{padding-top:3em;}
+.eMag.LatestIssue .contents{clear:none;}
+.eMag.LatestIssue ~ h2{margin: 12px;}
+.contents h2{margin:0 0 .6em;padding:0 0 .1em;border-bottom:3px solid #888;}
+.contents dl{overflow:hidden;margin:0;padding:0;color:#555;}
+.contents dt{display:block;font-size:1.25em;margin:.8em 0 .3em;color:#998;}
+.contents dt:first-child{margin-top:0;}
+.contents dd{margin:0 0 .4em;}
+/*.eMag.LatestIssue .contents dl:after{content:'... ... ...'}*/
+.eMag .image{float:left;width:33%;height:auto;padding-right:2%;}
+.eMag .image img{display:block;margin:0 auto;max-width:100%;height:auto;border:1px solid #afbbc2;}
+.eMag.LatestIssue .image{width:270px;margin-right:10px;}
+.eMag.LatestIssue .image img{width:270px;}
+.eMag .buttons{margin:.7em auto 0;padding:0;text-align:center !important;overflow:hidden;}
+.eMag .buttons li,
+.eMag .info li,
+.eMag .count li{float:none;margin:0;padding:0;display:inline-block;}
+.eMag .buttons li a,
+.eMag .info li,
+.eMag .count li a{height:3em;line-height:3em;border-radius:6px;min-width:6em;}
+.eMag .meta ~ .buttons li{display:inline-block;}
+.eMag .meta + .buttons{text-align:right;margin:1em 0 0;}
+.eMag .image .buttons{text-align:center;}
+.eMag .image .buttons li{display:inline-block;}
+.eMag .meta{margin-left:35%;}
+
+@media screen and (max-width:1000px) {
+/*	
+	.share{top:200px;left:50%;margin:0 auto 0 -180px;padding:.6em 0 0;width:360px;height:auto;background:#c5c8c9;border-radius:21px;box-shadow:rgba(0,0,0,.6) 0 5px 40px;display:none;}
+	.share h1{font-size:1.4em;text-align:center;font-weight:normal;}
+	.share ul{list-style:none;margin:0;padding:0;font-size:1.5em;text-align:left;}
+	.share li{margin:.25em .6em;width:auto;height:auto;font-weight:normal;}
+	.share li a{display:block;overflow:hidden;width:auto;height:auto;background:#fff;white-space:nowrap;line-height:64px;color:#000;}
+	.share li a img{float:left;width:64px;height:64px;margin-right:.5em;}
+	.share li.close{display:block;text-align:center;width:3em;padding:.4em 1em;margin:.6em auto;background:#fff;border-radius:2em;}
+*/
+
+	.share{top:200px;left:50%;margin:0 auto 0 -180px;padding:1.5em 0 0;width:360px;height:auto;background:#d5d8d9; border-radius:21px;box-shadow:rgba(0,0,0,.6) 0 5px 40px;display:none;}
+	.share>span{font-size:1.4em;text-align:center;font-weight:normal; color: #000;}
+	.share ul{list-style:none;margin:.5em 0 0;padding:0;font-size:1.5em;text-align:left;}
+	.share li{margin:.25em .6em; width:auto; height:auto; font-weight:normal;}
+	.share li a{display:block;overflow:hidden;width:auto;height:auto;background:#fff;white-space:nowrap;line-height:64px;color:#000;}
+	.share li a img{float:left;width:64px;height:64px;margin-right:.5em;}
+	.share li.close{display:block;text-align:center;width:3em;padding:.4em 1em;margin:.6em auto;background:#fff;border-radius:2em;}
+	.shareThis{display:block;}
+
+	.overlay2{background:#000;opacity:.6;width:100%;position:absolute;top:0;bottom:0;z-index:8000;}
+
+	.cpArticle{margin: 0;}
+
+	.meta{width: auto;}
+	.album .photoShow {margin:-30px -28px 0;}
+	.album .photoThumb{margin: 0 -28px;}
+	.photoShow{height: 500px;}
+	.photoShow li img{max-height:440px;}
+
+	.attachment, .seeAlso{margin:30px 0;}
+	.seeAlso ul li a{display:block;padding:.8em 0 .2em;}
+	.attachment .images li{float:none;display:inline-block;vertical-align:top;width:24%;margin:0 .4% 10px 0;border:1px solid #999;box-sizing:border-box;}
+	.attachment .images li:nth-child(4n) {margin-right:0;}
+	.attachment .images li a{width:auto;height:auto;}
+	.attachment .images li img{width:100%;height:auto;}
+	.attachment .images li p{position:static;width:auto;background:none;color:#888;max-height:4em;font-size:.88em;line-height:1.4;max-height:none;}
+
+	.eMag{border:none;margin: 0;padding: 2px;}
+	.LatestIssue .contents{-moz-column-count:1;-moz-column-gap:1em;-webkit-column-count:1;-webkit-column-gap:1em;column-count:1;column-gap:1em;}
+	.eMag.LatestIssue .buttons li { display:block; width:auto;}
+	.eMag.LatestIssue .buttons li a { display:block; width:auto; margin:0 0 8px;}
+	.eMag.LatestIssue ~ h2{margin-bottom:24px;}
+
+	.preface{margin:-16px -16px 20px;}
+	.page+.preface{margin-bottom:0;padding-bottom: 3em;}
+}
+@media screen and (max-width:800px) {
+	.videoPlay object{display:block;max-width:100%;float:none;margin:0 auto 2em;border-bottom:3px solid #bbb;}
+
+	.preface{margin:-16px -16px 1em;}
+
+	.photoShow {height:440px;}
+	.photoShow li img{border:0;box-shadow:none;max-width:100%;max-height:400px;}
+	.photoShow li .caption{font-size:.85em;margin:5px 12px 0;}
+	.photoShow li .photoCount{font-size:.65em;}
+
+	.eMag.LatestIssue .buttons li a{min-width: 0;padding-left: 0;padding-right: 0;}
+}
+@media screen and (max-width:600px) {
+	.share{top:70px;width:300px;margin-left:-150px;}
+	.share>span,
+	.share ul{font-size:1.15em;}
+
+	.cpArticle{margin: 0 -12px;}
+	.cpArticle figure{float:none;width:100%;margin:0 auto 2em;box-sizing:border-box;}
+	.cpArticle figcaption{font-size:.88em;}
+	.cpArticle figure img{width:100%;}
+	.cpArticle th[scope="row"]{width:auto;}
+
+	.cpArticle .list  table { border:none;}
+	.cpArticle .list td { border:none;border-bottom: 1px dotted #ccc;}
+
+	.attachment .images li{display:block;width:100%;margin:0 0 12px;}
+	.attachment .images li p{max-height:auto;}
+
+	.meta{margin: 1em -12px 0;}
+	.meta h2{margin:0 16px;font-size:1em;}
+	.meta p{margin: 0 16px 1em;}
+	.meta p a {word-break: break-all;}
+	.meta table{border:none;}
+	.meta tr{display:block;border-top:1px solid #afbbc2;padding:.8em 16px;}
+	.meta th,
+	.meta td{display:inline-block;text-align:left;border:none;width:auto;padding:.2em 0;}
+	.meta th{min-width:0;background:#e5e8e9;border-radius:0 2em 2em 0;padding-left:16px;padding-right:.9em;margin-left:-16px;margin-right:.5em;font-size: .9em;padding-top: .4em;}
+	.meta td iframe{ margin:.5em auto 0;height:400px;}
+	.meta.resume table{width:100%;float:none;margin:0;}
+	.meta.resume figure{width:92%;max-width:none;float:none;margin:10px auto 2em;}
+	.pubInfo{margin-left: -12px; margin-right: -12px;}
+	.pubInfo ul{font-size:.8em;}
+	.pubInfo li em{font-size:1.2em;}
+
+	.album .photoShow {margin:-27px -24px 0;}
+	.album .meta{margin: 0 -24px;width: auto;padding-top: 0;}
+	.album .meta table {width: 100%;}
+	.photoShow{height:auto;padding-top:0;}
+	.photoShow li a:hover, .photoShow li a:hover img {box-shadow:none}
+	.photoShow li{top:0;}
+	.photoShow li img{max-height:100%}
+	.photoShow .btn{left:0; top:160px;} .photoShow .btn.next{right:0;}
+	.photoShow .btn:before{width:20px;height:20px;border-width:3px;top:21px;}
+	.photoShow .btn.next:before{margin-left:3px;}
+	.photoThumb{display:none;}
+	.ppause{left:0;}
+	.photoShow .btn:before{border-color: #fff}
+	.photoShow li .caption{font-size:1em;}
+
+
+	.preface{margin:-12px -12px 0;padding: 1em;}
+	.preface h1{font-size:1.4em;}
+	.preface .info,
+	.preface .count{font-size:.9em;display:block;}
+	.preface .info li{margin:0 0 .8em;display:block;}
+	.preface .count{float:none;text-align:left;}
+
+	.eMag .image,
+	.eMag.LatestIssue .image{float:none;width:100%;height:auto;margin:0;}
+	.eMag .image img,
+	.eMag.LatestIssue .image img{width:100%;max-height:none;}
+	.eMag.LatestIssue .buttons { font-size:1.2em;}
+	.eMag.LatestIssue .buttons li { clear:none; float:left; width:49%;}
+	.eMag.LatestIssue .buttons li:last-child { float:right;}
+	.eMag h1{font-size:1.4em;margin-top:1.5em;}
+	.eMag .meta{float:none;width:100%;margin:.6em 0 0;}
+	.eMag .meta + .buttons{text-align:center;padding-top:0;}
+	.eMag .contents{padding-top:0;-moz-column-count:1;-moz-column-gap:1em;-webkit-column-count:1;-webkit-column-gap:1em;column-count:1;column-gap:1em;}
+}
+
