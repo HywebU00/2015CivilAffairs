@@ -196,14 +196,14 @@
 
 <section class="page">
   <p>共<em>336</em>筆資料，第<em>1/310</em>頁，
-    <label for="perPage1">每頁顯示</label>
+    <label for="perPage1">每頁顯示筆數</label>
     <select name="perPage" id="perPage1" onchange="perPageChange(this.value);">
       <option value="10">10</option>
       <option value="30">30</option>
       <option value="50">50</option>
       <option value="100">100</option>
     </select>
-    筆<input type="button" value="確定" onclick="perPageChange(document.getElementById('perPage').value);">
+    筆<input type="button" value="確定">
   </p>
   <ul>
     <li class="first"><a href="#">第一頁</a></li>
@@ -319,15 +319,17 @@
 <span class="nextPage"><a href="lp_table.html">下一頁</a></span>
 </section>
 <section class="page">
-  <p>共<em>15</em>筆資料，第<em>1/2</em>頁，
-    <label for="perPage2">每頁顯示</label>
+  <p>共<em>15</em>筆資料，第
+    <!-- <em>1/2</em> -->
+    <abbr title="目前在第1頁，總共2頁">1/2</abbr>
+    頁，<label for="perPage2">每頁顯示筆數</label>
     <select name="perPage" id="perPage2" onchange="perPageChange(this.value);">
       <option value="10">10</option>
       <option value="30">30</option>
       <option value="50">50</option>
       <option value="100">100</option>
     </select>
-    筆</p>
+    筆<input type="button" value="確定" /></p>
   <ul>
     <li class="first"><a href="#">第一頁</a></li>
     <li class="prev"><a href="#">上1頁</a></li>
@@ -347,7 +349,7 @@
 <footer class="footer">
   <a class="accesskey" href="#aF" id="aF" accesskey="F" title="頁尾區">:::</a>
   <div class="fatfootCtrl">
-    <input type="button" title="控制 fatfooter 選單收合" name="sildeCtrlbtn" id="sildeCtrlbtn" value="收合" />
+    <button type="button" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
   </div>
   <nav>
     <ul>

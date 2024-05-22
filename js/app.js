@@ -341,17 +341,49 @@ $(document).ready(function() {
 		}
 	});
 
-	// Fatfooter, qrCode 開合
-	$(function(){
-		$('.fatfootCtrl input').click(function(){
-			$(this).toggleClass('close');
-			$('footer>nav').toggleClass('close');
-			$('.qrcode, .director').slideToggle();
-			$('footer>nav>ul>li>ul').slideToggle(function(){
-				$(this).toggleClass('close');
-			});
-		});
-	});
+	// // Fatfooter, qrCode 開合
+	// $(function(){
+	// 	$('.fatfootCtrl input').click(function(){
+	// 		$(this).toggleClass('close');
+	// 		$('footer>nav').toggleClass('close');
+	// 		$('.qrcode, .director').slideToggle();
+	// 		$('footer>nav>ul>li>ul').slideToggle(function(){
+	// 			$(this).toggleClass('close');
+	// 		});
+	// 	});
+	// });
+
+	// ---------- 2024 無障礙修改 ---------- //
+	// Fatfooter, qrCode 開合 
+	var _footer = $('footer.footer');
+	var _fatfootCtrlBtn = _footer.find('button.btn-fatfooter').text('控制按鈕');
+	var _footerNav = _footer.find('nav');
+	var _footerNavSlide = _footer.find('nav>ul>li>ul');
+	var _footerQrcode = _footer.find('.qrcode');
+
+	if ( _footerNavSlide.first().is(':visible') ) {
+			_fatfootCtrlBtn.removeClass('close').attr('aria-expanded', true);
+	} else {
+			_fatfootCtrlBtn.addClass('close').attr('aria-expanded', false);
+	}
+
+	_fatfootCtrlBtn.click(function () {
+		if (_footerNavSlide.first().is(':visible')) {
+			_footerNavSlide.add(_footerQrcode).stop().slideUp(400);
+			_fatfootCtrlBtn.addClass('close').attr('aria-expanded', false);
+			_footerNav.addClass('close');
+		} else {
+			_footerNavSlide.add(_footerQrcode).stop().slideDown(400);
+			_fatfootCtrlBtn.removeClass('close').attr('aria-expanded', true);
+			_footerNav.removeClass('close');
+		}
+	})
+
+
+	// ---------- 2024/5 無障礙修改 ---------- //
+	// 分頁顯示筆數 select 元件加 aria-label 屬性（2024 無障礙修改）
+	$('.page').find('select').attr('aria-label', '每頁顯示筆數');
+
 
 	// 小廣告輪播，水平
 	$('.adBlockH').each(function(){

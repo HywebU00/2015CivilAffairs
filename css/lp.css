@@ -156,7 +156,8 @@
 .list + .page, .thumbnail + .page{float:none;width:100%;margin-bottom:80px;}
 .page .first, .page .last, .page .prevTen, .page .nextTen, .condition{display:inline-block;}
 .page p{display:inline-block;margin:0 1em .3em;padding:0;line-height:1.1;}
-.page em{margin:0 3px;color:#111;}
+.page em, .page abbr{margin:0 3px;color:#111; font-weight: bold; font-style: normal;}
+.page abbr { text-decoration: none;}
 .page select{font-weight:bold;vertical-align:middle;margin:0 3px 3px;border:1px solid #bbb; width:auto; height:2em; line-height:2;}
 .page select:focus{border-color:#000;}
 .page option{font-weight:bold;}
