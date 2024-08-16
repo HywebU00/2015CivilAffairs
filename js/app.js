@@ -224,13 +224,22 @@ $(document).ready(function() {
 	//頁籤
 	$('.tabs').find('.active').next('.tabContent').show();
 	
-    var _tabset = $('.tabSet'),
-    		tabwidth = _tabset.width(),
-    		_tabItem = _tabset.find('h2>a'),
-	      tabItemHeight = _tabItem.innerHeight(),
-    		_tabContent = $('.tabContent'),
-        wwSmall = 800;//視窗寬度小於等於這個數值，頁籤垂直排列。需配合css調整。
+	var _tabset = $('.tabSet'),
+			tabwidth = _tabset.width(),
+			_tabItem = _tabset.find('h2>a'),
+			tabItemHeight = _tabItem.innerHeight(),
+			_tabContent = $('.tabContent'),
+			wwSmall = 800;//視窗寬度小於等於這個數值，頁籤垂直排列。需配合css調整。
 
+	_tabItem.attr('role', 'tab');
+	_tabItem.each(function(){
+		let _this = $(this);
+		if ( _this.parent('.active').length == 1 ) {
+			_this.attr('aria-selected', true);
+		} else {
+			_this.attr('aria-selected', false);
+		}
+	})
 	_tabContent.css('top' , tabItemHeight );
 
 	_tabset.each(function(){//各別處理每個頁籤組
@@ -254,14 +263,17 @@ $(document).ready(function() {
              tvp = _aParent.parents('.tabSet').offset(),
              tabIndex = _aParent.index()/2,
              scollDistance = tvp.top + tabItemHeight*tabIndex - hh;
+				
+				_aParent.addClass('active').children('a').attr('aria-selected', true);
+				_aParent.siblings('h2').removeClass('active').children('a').attr('aria-selected', false);
 
         if(ww <= wwSmall){
-            _aParent.siblings('h2').removeClass('active').next(_tabContent).slideUp();
-            _aParent.addClass('active').next().slideDown();
+					_aParent.next().slideDown();
+					_aParent.siblings('h2').next(_tabContent).slideUp();
             $("html,body").stop(true,false).animate({scrollTop:scollDistance});
         } else {
-            _aParent.siblings('h2').removeClass('active').next(_tabContent).css("display","none");
-            _aParent.addClass('active').next(_tabContent).css("display","block");            
+					_aParent.next().css("display","block");
+					_aParent.siblings('h2').next().css("display","none");
         }
 
 		tabContentHeight = _aParent.next().innerHeight();
