@@ -297,7 +297,7 @@ $(document).ready(function() {
 	} else {
 		showLength = parseInt((ww-60)/shiftItemWidth);
 	}
-	for(var i=0; i<totalLength; i++){
+	for(let i=0; i<totalLength; i++){
 		indicater_li = indicater_li +'<li></li>';
 	}
 	$('.indicater').append(indicater_li);
@@ -418,8 +418,8 @@ $(document).ready(function() {
 		_adSlideGroup.width(itemWidth*count);
 
 		if(count>showItem){
-			var	autoAdSlide = setInterval(slideForward, timer);
-			var i = 0;
+			let	autoAdSlide = setInterval(slideForward, timer);
+			let i = 0;
 
 			_pauseArea.hover(
 				function(){ clearInterval(autoAdSlide);},
@@ -520,80 +520,152 @@ $(document).ready(function() {
     });
        
 
-	//拍片景點
-	var _photoThumb = $('.photoThumb').find('li'),
-		_photoShow = $('.photoShow').find('li'),
-		photoCount = _photoThumb.length,
-		duration = 3000,
-		tt = setInterval(autoShow, duration);
+	// ---------------------------------------------------------------------------------------- //
 
-	_photoThumb.first().addClass('active');
-	_photoShow.first().show();
-
-	$('.photoShow').after('<div class="ppause"></div>');
-	var ppCtrl = $('.ppause');
-	if(ww <= 600){
-		var hini = _photoShow.first().height();
-		$('.photoShow').height(hini);
-		
-		ppCtrl.click(function(){
-			$(this).toggleClass('pplay')
-			if (ppCtrl.hasClass('pplay')) {
+	// 拍片景點、相簿內容頁
+	$('.album').each(function(){
+		let _this = $(this);
+		let _photoThumb = _this.find('.photoThumb').find('li'); // 小圖
+		let _photoShowArea =  $('.photoShow');
+		let _photoShow = _photoShowArea.find('li'); // 大圖
+		let phLength = _photoShow.length; // 張數
+		let duration = 3250;
+		let tt = setInterval(autoShow, duration);
+		let i = 0;
+	
+		_photoThumb.children('a').attr('role', 'button').attr('tabindex', -1);
+		_photoThumb.eq(i).addClass('active');
+		_photoShow.children('a').attr('tabindex', -1);
+		_photoShow.eq(i).show().children('a').attr('tabindex', 0);
+	
+		_photoShowArea.append('<span class="photoCount"><em></em> </span>');
+		_photoShowArea.prepend('<button type="button" class="btn prev" aria-label="上一張"></button>');
+		_photoShowArea.append('<button type="button" class="btn next" aria-label="下一張"></button>');
+	
+		const _photoCount = _photoShowArea.find('.photoCount');
+		const _phNow = _photoCount.find('em');
+		const _btnNext = _photoShowArea.find('.next');
+		const	_btnPrev = _photoShowArea.find('.prev');
+	
+		// 張數計數
+		_photoCount.append( '/ ' + phLength );
+		_phNow.text("1");
+	
+		// 暫停鍵
+		$('.photoShow').append('<button type="button" class="ppause" aria-label="暫停"></button>');
+		const _ppCtrl = $('.ppause');
+	
+		// 按暫停鍵
+		_ppCtrl.click(function(){
+			i = _photoShow.filter(':visible').index();
+			let _this = $(this);
+			if ( _this.hasClass('paused')) {
+				_this.removeClass('paused');
 				clearInterval(tt);
-			} else {
 				tt = setInterval(autoShow, duration);
+			} else {
+				_this.addClass('paused');
+				clearInterval(tt);
 			}
 		})
-	};
-
-	_photoShow.append('<span class="photoCount"></span>');
-	$('.photoShow').append('<div class="btn prev"></div><div class="btn next"></div>');
-
-	for(n=1; n<=photoCount; n++){
-		_photoShow.eq(n-1).find('.photoCount').text( n + '/' + photoCount);
-	}
-
-	var i = 0;
-	var _btnNext = $('.photoShow').find('.next'),
-		_btnPrev = $('.photoShow').find('.prev');
-
-	_btnNext.click(function(){i = (i+1) % photoCount;showPhoto();});
-	_btnPrev.click(function(){i = (i-1) % photoCount;showPhoto();});
-
-	_photoThumb.find('a').click(function(){
-		i = $(this).parent('li').index();
-		showPhoto();
-	});
-	_photoThumb.find('a').focus(function(){
-		clearInterval(tt);
-		i = $(this).parent('li').index();
-		showPhoto();
-	});
-
-	_photoThumb.last().focusout(function(){
-        tt = setInterval(autoShow, duration);
-    });
-
-	$('.photoShow, .photoThumb li').hover(
-		function(){clearInterval(tt);},
-		function(){
-			if ( !(ppCtrl.hasClass('pplay')) ) {
-				tt = setInterval(autoShow, duration);
+	
+		if(ww <= 600){
+			let hini = _photoShow.first().height();
+			_photoShowArea.height(hini);
+		};
+	
+		for( let n=1; n<=phLength; n++){
+			_photoShow.eq(n-1).attr( 'data-index' , n);
+		}
+	
+		_photoShow.children('a').focus( function(){
+			clearInterval(tt);
+		})
+		_photoShow.children('a').blur( function(){
+			clearInterval(tt);
+			tt = setInterval(autoShow, duration);
+		})
+	
+	
+		// 右箭頭 ＞
+		_btnNext.click( function(){
+			i = (i+1) % phLength;
+			showPhoto();
+			clearInterval(tt);
+			if (! _ppCtrl.hasClass('paused')) {
+				setTimeout( function(){
+					clearInterval(tt);
+					tt = setInterval(autoShow, duration);
+				}, 6000);
+			}
+		});
+	
+		// 左箭頭 ＜
+		_btnPrev.click( function(){
+			i = (i-1) % phLength;
+			showPhoto();
+			clearInterval(tt);
+			if (! _ppCtrl.hasClass('paused')){
+				setTimeout( function(){
+					clearInterval(tt);
+					tt = setInterval(autoShow, duration);
+				}, 6000);
+			}
+		});
+	
+		// 鍵盤操作，點擊 向左、向右鍵
+		$('body').on('keydown', function(e){
+			// 向右鍵
+			if (e.keyCode == 39) {
+				_btnNext.trigger('click');
+			}
+			// 向左鍵
+			if (e.keyCode == 37) {
+				_btnPrev.trigger('click');
+			}
+		})
+	
+		_photoThumb.find('a').on('click', function(e){
+			e.preventDefault;
+			i = $(this).parent('li').index();
+			showPhoto();
+		});
+	
+		_photoThumb.last().focusout(function () {
+			tt = setInterval(autoShow, duration);
+		});
+	
+		// 滑鼠游標在上，暫停輪播
+		$('.photoShow, .photoThumb li').hover(
+			function(){clearInterval(tt);},
+			function(){
+				if ( ! _ppCtrl.hasClass('paused') ) {
+					clearInterval(tt);
+					tt = setInterval(autoShow, duration);
+				}
+			}
+		);
+	
+		// 自動往前輪播
+		function autoShow(){
+			i = (i+1) % phLength;
+			showPhoto();
+		}
+	
+		// 顯示哪張照片
+		function showPhoto(){
+			// console.log(i);
+			_photoThumb.eq(i).addClass('active').siblings().removeClass('active');
+			_photoShow.eq(i).fadeIn(250).children('a').attr('tabindex', 0).end().siblings().fadeOut(250).children('a').attr('tabindex', -1);
+			_phNow.text(_photoShow.eq(i).attr('data-index'));
+			if(ww <= 600){
+				var	photoHeight = _photoShow.eq(i).height();
+				$('.photoShow').animate({height:photoHeight});
 			}
 		}
-	);
-	function autoShow(){
-		i = (i+1) % photoCount;
-		showPhoto();
-	}
-	function showPhoto(){
-		_photoThumb.eq(i).addClass('active').siblings().removeClass('active');
-		_photoShow.eq(i).fadeIn().siblings().fadeOut();
-		if(ww <= 600){
-			var	photoHeight = _photoShow.eq(i).height();
-			$('.photoShow').animate({height:photoHeight});
-		}
-	}
+
+	})
+	// ---------------------------------------------------------------------------------------- //
 
 
 	//照片內容頁參數
