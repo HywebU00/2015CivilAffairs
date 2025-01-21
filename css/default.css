@@ -285,6 +285,7 @@ a.accesskey:focus{color:#f50;}
 .footer>nav>ul>li>a{font-weight:bold;float:left;}
 .footer>nav li a:hover{text-decoration:underline;}
 .footer>nav li a:focus{color:#fff;background:#4e6164;text-decoration:none;outline:none;}
+
 .footer>section{position:relative;clear:both;margin:0;padding:32px 26px 80px;border-top:1px solid #bbc8cd;}
 .footer>section>ul,
 .footer>section>p{position:relative;left:50%;text-align:left;margin:0 auto .5em -474px;max-width:800px;}
@@ -294,24 +295,24 @@ a.accesskey:focus{color:#f50;}
 .footer>section>ul>li a{border:none;color:#000;padding:.3em .5em;border-radius:3px;}
 .footer>section>ul>li a:hover{text-decoration: underline;}
 .footer>section>ul>li a:focus{background:#4e6164;color:#fff;text-decoration:none;outline:none;}
-.visitor,
-.update{position:relative;left:50%;display:inline-block;width:auto;margin:1.3em 1.6em 0 0;text-align:left;}
+
+.visitor, .update{position:relative;left:50%;display:inline-block;width:auto;margin:1.3em 1.6em 0 0;text-align:left;}
 .visitor{margin-left:-474px;}
-.visitor em,
-.update em{font-weight:normal;margin-left:.2em;color:#555;}
-.visitor em:before,
-.update em:before{content:'：';}
-.footer .markA,
-.footer .egov{position:absolute;line-height:1;margin:0 0 0 300px;top:35px;}
+.visitor em, .update em{font-weight:normal;margin-left:.2em;color:#555;}
+.visitor em:before, .update em:before{content:'：';}
+
+.footer .markA, .footer .egov{position:absolute;line-height:1;margin:0;top:35px; left: auto;}
+.footer .markA { width: 132px; right: 80px;}
+.footer .egov{ width: 43px; right: 26px;}
 .markA a, .egov a,
-.markA a img, .egov a img{display:block;}
-.markA a, .egov a{padding: 3px;border-radius: 3px;}
-.markA a img{width: 120px;}
-.markA a:hover,
-.egov a:hover,
-.markA a:focus,
-.egov a:focus{box-shadow: #4e6164 0 0 4px;background: #fff;outline: none;}
-.footer .egov{margin-left:440px;}
+.markA img, .egov img{display:block; width: 100%;}
+.markA a:hover, .egov a:hover,
+.markA a:focus, .egov a:focus {
+	box-shadow: #fff 0 0 0 1px, #4e6164 0 0 0 4px; background: #fff;
+	outline: none; border-radius: 1px;
+}
+
+
 .qrcode{float:right;list-style:none;padding:0;margin:4px 20px 0 0;}
 .qrcode li{margin:0 0 10px;padding:0;}
 .qrcode li a{display:block;outline:none;border:14px solid #fff;border-radius:8px;transition:.2s;}
@@ -362,7 +363,7 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.navi, .header .sidebarCtrl,  .searchCtrl{display:block;}
 	/*行動版隱藏項目*/
 	/*.accesskey, */.navigation, .fontSize, .weather, .friendly, .rss, .slideA,
-	.center>header,.header .menu, .header .menu2p, .header .megaMenu, .markA, .egov, .center .share, .adBlockH{display:none;}
+	.center>header,.header .menu, .header .menu2p, .header .megaMenu, .center .share, .adBlockH{display:none;}
 	/*初始值*/
 	a{color:#000;}
 	a:hover{text-decoration:none;}
@@ -444,8 +445,8 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.center > h2{margin:2em 16px .4em;}
 
 	.footer{font-size:.9em;margin:0;padding:60px 3% 40px;}
-	.footer>nav, .fatfootCtrl , .qrcode , .footer .markA, .footer .egov{display:none;}
-	.footer>section{border:none;padding:0}
+	.footer>nav, .fatfootCtrl , .qrcode  {display:none;}
+	.footer>section{border:none;padding:0 0 90px;}
 	.footer>section>ul, .footer>section>p{left:0;margin:0 auto;padding:0;max-width:none;}
 	.footer>section>ul{margin:0 0 1em;text-align:center;overflow:hidden;}
 	.footer>section>ul>li{float:left;width:48%;margin:0 2% 1.2em;border-bottom:1px solid #bbc8cd;}
@@ -459,6 +460,11 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.visitor, .update{display:inline-block;left:auto;margin:1.6em 1em 0 0;padding:0;}
 
 	.director{display:none;}
+
+	/* 20250121 */
+	.footer .markA, .footer .egov{top: auto; right: auto; bottom: 10px; margin: 0; padding: 0;}
+	.footer .markA{ left: 0; bottom: 10px;}
+	.footer .egov{ left: 150px;}
 }
 
 
@@ -468,8 +474,10 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.search form{display:block;white-space:nowrap;width:90%;margin:0 auto;}
 	.search input[type="text"]{width:calc(100% - 7.5em);}
 
-	.visitor, .update{margin:1.2em auto 0;text-align:center;display:block;}
-	.visitor{border-top:1px solid #bbb;padding-top:1.2em;}
+	.visitor, .update{margin:1.2em auto 0; display: inline-block;}
+	.visitor + .update,
+	.update + .visitor { margin-left: 15px;}
+
 	.ui-widget-content{right:200px;}
 }
 @media (max-width:600px){
