@@ -301,7 +301,7 @@ a.accesskey:focus{color:#f50;}
 .visitor em, .update em{font-weight:normal;margin-left:.2em;color:#555;}
 .visitor em:before, .update em:before{content:'：';}
 
-.footer .markA, .footer .egov{position:absolute;line-height:1;margin:0;top:35px; left: auto;}
+.footer .markA, .footer .egov{position:absolute;line-height:1;margin:0;bottom:60px; left: auto;}
 .footer .markA { width: 132px; right: 80px;}
 .footer .egov{ width: 43px; right: 26px;}
 .markA a, .egov a,
@@ -444,9 +444,9 @@ h4.alertCAP_forTCC_title br{display: none;}
 	
 	.center > h2{margin:2em 16px .4em;}
 
-	.footer{font-size:.9em;margin:0;padding:60px 3% 40px;}
+	.footer{font-size:.95em;margin:0;padding:60px 3% 40px;}
 	.footer>nav, .fatfootCtrl , .qrcode  {display:none;}
-	.footer>section{border:none;padding:0 0 90px;}
+	.footer>section{border:none; padding: 0 0 80px;}
 	.footer>section>ul, .footer>section>p{left:0;margin:0 auto;padding:0;max-width:none;}
 	.footer>section>ul{margin:0 0 1em;text-align:center;overflow:hidden;}
 	.footer>section>ul>li{float:left;width:48%;margin:0 2% 1.2em;border-bottom:1px solid #bbc8cd;}
@@ -455,20 +455,16 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.footer>section>ul>li>a{display:inline-block;text-align:left}
 	.footer>section>ul>li>a:hover{text-decoration:none;border-color:#666;}
 	
-	.footer .capInfo{display: none;}/* 20210428 災害警示資訊 */
-
 	.visitor, .update{display:inline-block;left:auto;margin:1.6em 1em 0 0;padding:0;}
-
+	
+	.footer .capInfo{display: none;}/* 20210428 災害警示資訊 */
 	.director{display:none;}
 
-	/* 20250121 */
-	.footer .markA, .footer .egov{top: auto; right: auto; bottom: 10px; margin: 0; padding: 0;}
-	.footer .markA{ left: 0; bottom: 10px;}
-	.footer .egov{ left: 150px;}
 }
 
 
 @media (max-width:800px){
+	.footer>section{padding-bottom: 80px;}
 	.footer>section>p{margin:1em 0 0;line-height:1.6;}
 	.search{top:44px;left:0;width:100%}
 	.search form{display:block;white-space:nowrap;width:90%;margin:0 auto;}
@@ -477,6 +473,12 @@ h4.alertCAP_forTCC_title br{display: none;}
 	.visitor, .update{margin:1.2em auto 0; display: inline-block;}
 	.visitor + .update,
 	.update + .visitor { margin-left: 15px;}
+
+	/* 20250121 */
+	.footer .markA, .footer .egov{ top: auto; right: auto; bottom: 10px; margin: 0; padding: 0;}
+	.footer .markA{ left: 0; }
+	.footer .egov{ left: 150px;}
+	
 
 	.ui-widget-content{right:200px;}
 }
