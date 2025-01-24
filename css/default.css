@@ -336,64 +336,6 @@ a.accesskey:focus{color:#f50;}
 	a:focus{outline:none;}
 
 
-	/* ---------- */
-	/* .sidebarCtrl,
-	.searchCtrl{position:absolute;font-size:0;top:50%;margin-top:-24px;left:8px;width:48px;height:48px;box-sizing:border-box;border:1px solid #65787b;}
-	.searchCtrl{left:auto;right:7px;}
-	.sidebarCtrl{border-radius:4px;}
-	.sidebarCtrl a{display:block;position:relative;margin:11px auto 0;width:32px;height:16px;border:4px solid #65787b;border-right:none;border-left:none;}
-	.sidebarCtrl a:before{content:'';position:absolute;top:6px;width:32px;height:4px;background:#65787b;}  */
-	
-
-	/*行動版隱藏式側欄*/
-	/* .sidebar{position:fixed;top:0;height:100%;background:#f4f7f8;width:280px;overflow-y:auto;z-index:9000;}
-	.sidebar a{color:#000;}
-	.sidebar .sidebarCtrl{text-align:center;border-top:3px solid #91afb7}
-	.sidebar .sidebarCtrl a{position:relative;display:block;padding:1.2em 0;background:#0984a3;color:#fff;letter-spacing:1em;text-indent:3em;}
-	.sidebar .sidebarCtrl a:before,
-	.sidebar .sidebarCtrl a:after{content:'';width:24px;height:2px;background:#fff;transform:rotate(45deg);position:absolute;left:50%;top:1.75em;margin:0 0 0 -2.8em;}
-	.sidebar .sidebarCtrl a:after{transform:rotate(-45deg);} */
-
-	/*menu*/
-	/* .sidebar .menu{background:#65787b;font-size:20px;}
-	.sidebar .menu ul{list-style:none;margin:0;padding:0;overflow:hidden;line-height:1.4;width:100%}
-	.sidebar .menu a{position:relative;display:block;padding:.7em 1.8em .6em .5em;color:#fff;border-top:1px solid #778a8d;transition:.4s;}
-	.sidebar .menu ul>li:first-child>a{border:none;}
-	.sidebar .menu a:hover,
-	.sidebar .menu a:focus{background-color:#455659;}
-	.sidebar .menu li.hasChild>a:before{content:'';position:absolute;top:.7em;right:.8em ;width:.8em;height:.8em;border:2px solid #ddd;transform:rotate(45deg);border-top:none;border-left:none;transition:all .3s;}
-	.sidebar .menu li.hasChild.closeThis>a:before{transform:rotate(-135deg);top:1.1em;border-color:#fff}
-	.sidebar .menu li li.hasChild.closeThis>a{background-position:right -102px;}
-	.sidebar .menu ul ul{display:none;padding:.4em 6px .8em;margin:0;font-size:.9em;box-shadow:rgba(0,0,0,.4) 0 0 10px 1px inset;width:auto;}
-	.sidebar .menu ul ul ul{font-size:1em;}
-	.sidebar .menuMoreCtrl{display:none;}
-
-	.sidebar .navigation{display:block;position:static;border-bottom:4px solid #ffa300;margin:0;padding:9px 0;line-height:1;}
-	.sidebar .navigation li{margin:0;display:inline-block;border-right:1px solid #bbb;}
-	.sidebar .navigation li a{padding:.2em .9em 0;height:2em;line-height:2em;}
-	.overlay{display:none;opacity:0;position:fixed;top:0;left:0;width:100%;height:100%;min-height:inherit;background-color:#000;z-index:8888;} */
-
-
-
-
-	/* .searchCtrl{border-radius:50%;background:url(../images/searchCtrl.png) no-repeat center center;background-size:88%;}
-	.searchCtrl a{display:block;width:100%;height:100%;}
-	.searchCtrl.close{background-image:url(../images/searchClose.png);}  */
-
-	/* .search .keywordHot{display:none;}
-	.search{left:auto;right:64px;top:0;bottom:auto;display:none;background:#0984a3;box-shadow:rgba(0,0,0,.4) 0 3px 6px;z-index:99;}
-	.search form{border:none;padding:8px 10px;}
-	.search input, .search input[type="text"],
-	.search input[type="submit"]{font-size:20px;height:2.2em;line-height:2.2;vertical-align:middle;border:none;}
-	.search input[type="text"]{border-radius:2em;padding:0 .8em;background:#fff;width:190px;}
-	.search input[type="submit"]{text-indent:-200px;background:#ffd955 url(../images/searchCtrl.png) no-repeat center center;background-size:40px;width:2.2em;border-radius:50%;margin:0}
-
-	.search input[type="submit"]:focus,
-	.search input[type="submit"]:hover{background-color:#fdff58;border-color:#fdff58;box-shadow:#fdff58 0 0 1px 1px;}
-	.search input[type="text"]:focus{box-shadow:#4cf 0 0 1px 2px;}
-	.search .btnAdv{color:#9ef;padding:.6em 0 0;margin:0 0 0 8px;} 
-	*/
-
 	.ui-widget-content{top:40px;left:auto;right:218px;bottom:10px;max-height:none;margin-left:0;}
 
 
@@ -405,17 +347,6 @@ a.accesskey:focus{color:#f50;}
 
 }
 
-
-/* @media (max-width:800px){
-	.search{top:44px;left:0;width:100%}
-	.search form{display:block;white-space:nowrap;width:90%;margin:0 auto;}
-	.search input[type="text"]{width:calc(100% - 7.5em);}
-
-
-} */
 @media (max-width:600px){
 	.center{padding:12px;}
 }
-/* @media (max-width:320px){
-	.search input[type="text"]{width:144px;padding-left:.4em;padding-right:.4em;}
-} */

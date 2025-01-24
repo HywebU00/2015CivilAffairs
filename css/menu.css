@@ -42,6 +42,7 @@
 .menu2p ul ul,
 .menuMore ul ul{display:none;width:158px;font-size:16px;line-height:1.4;padding:0;position:absolute;top:auto;left:0;border:1px solid #888;text-align:left;box-shadow:rgba(0,0,0,0.4) 0 5px 14px;}
 .menu2p>ul>li>a{ min-width: 123px;}
+.menu2p li.hasChild{ position: relative;}
 .menu2p li li,
 .menuMore li li{position:relative;float:none;border-top:1px solid #ccc;}
 .menu2p li li:first-child,
