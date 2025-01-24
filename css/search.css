@@ -1,0 +1,49 @@
+/* 站內查詢 */
+/* .search -------------------------------------------------------------------------------- */
+.search{position:absolute;right:0;bottom:64px;}
+.search form { display: inline-block;}
+.search form,
+.search input{border:none;}
+.search label{font-size:0;}
+.search input[type="text"]{height:1.8em;line-height:1.8;width:98px;padding:0 30px 0 0;border:none;border-bottom:solid 2px #c6cfd5;}
+.search input[type="text"]:focus{border-color:#f80;color:#000;box-shadow:none;}
+.search input[type="submit"]{width:30px;height:30px;line-height:30px;border-radius:50%;background:url(../images/search_submit.png) no-repeat center center;background-size:22px;font-size:0;vertical-align:top;margin:0 0 0 -35px;}
+.search input[type="submit"]:hover{background-color:#fc0;box-shadow:#fc0 0 0 0 3px;}
+.search input[type="submit"]:focus{background-color:#fc0;box-shadow:#fc0 0 0 0 3px;}
+.search .btnAdv{display:inline-block;color:#0098ab;padding:5px 0 2px 3px;vertical-align:top;}
+.search .btnAdv:hover, .search .btnAdv:focus{text-decoration:underline;}
+
+.keywordHot{display:inline-block;vertical-align:top;}
+.keywordHot ul{list-style:none;margin:.4em 0 0;padding:0;overflow:hidden;line-height:1;}
+.keywordHot li{margin:2px .7em 1px 1px;padding:0;float:left;}
+.keywordHot li a{color:#555;text-decoration:none;display: block;}
+.keywordHot li a:hover{color:#000;text-decoration:underline;}
+.keywordHot li a:focus{color:#000;text-decoration:none;}
+
+
+@media (max-width:1000px){
+	.search .keywordHot{display:none;}
+	.search{left:auto;right:64px;top:0;bottom:auto;display:none;background:#0984a3;box-shadow:rgba(0,0,0,.4) 0 3px 6px;z-index:99;}
+	.search form{border:none;padding:8px 10px;}
+	.search input, .search input[type="text"],
+	.search input[type="submit"]{font-size:20px;height:2.2em;line-height:2.2;vertical-align:middle;border:none;}
+	.search input[type="text"]{border-radius:2em;padding:0 .8em;background:#fff;width:190px;}
+	.search input[type="submit"]{text-indent:-200px;background:#ffd955 url(../images/searchCtrl.png) no-repeat center center;background-size:40px;width:2.2em;border-radius:50%;margin:0}
+
+	.search input[type="submit"]:focus,
+	.search input[type="submit"]:hover{background-color:#fdff58;border-color:#fdff58;box-shadow:#fdff58 0 0 1px 1px;}
+	.search input[type="text"]:focus{box-shadow:#4cf 0 0 1px 2px;}
+	.search .btnAdv{color:#9ef;padding:.6em 0 0;margin:0 0 0 8px;}
+}
+
+@media (max-width:800px){
+	.search{top:44px;left:0;width:100%}
+	.search form{display:block;white-space:nowrap;width:90%;margin:0 auto;}
+	.search input[type="text"]{width:calc(100% - 7.5em);}
+}
+
+@media (max-width:320px){
+	.search input[type="text"]{width:144px;padding-left:.4em;padding-right:.4em;}
+}
+
+/* -------------------------------------------------------------------------------- */

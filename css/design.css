@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* CSS Document:台中市政府民政局; */
 @import url("default.css");
+@import url("header.css");
+@import url("menu.css"); /* 寬版選單 */
+@import url("search.css");
+@import url("footer.css");
+@import url("sidebar.css");
 @import url("mp.css");
 @import url("thumbnail.css");
 @import url("lp.css");

@@ -1,0 +1,128 @@
+
+/* 主選單（寬版，在版頭內） */
+/* -------------------------------------------------------------------------------- */
+.menu2p a,
+.menu2pMore a,
+.megaMenu a{text-decoration:none;}
+
+.menu2p,
+.megaMenu{position:relative;}
+.menu2p ul,
+.menuMore ul,
+.megaMenu ul{list-style:none;margin:0;padding:0;}
+.menu2p li,
+.menuMore li,
+.megaMenu li{margin:0;padding:0;}
+.menu2p li a,
+.menuMore li a,
+.megaMenu li a{display:block;}
+.menu2p>ul,
+.menuMore>ul,
+.megaMenu>ul{font-size:18px;line-height:60px;height:60px;background:#383838;}
+.menu2p>ul>li,
+.menuMore>ul>li,
+.megaMenu>ul>li{float:left;border-right:solid 1px #666;position:relative;}
+.menuMore>ul>li{display:block !important;}
+.menu2p>ul>li>a,
+.menuMore>ul>li>a,
+.megaMenu>ul>li>a {
+  width: auto;height: 60px;padding: 0 1em;
+  text-align: center;background: #383838;color: #fff;
+  transition: background .3s;
+}
+
+.menu2p>ul>li:hover>a,
+.menu2p>ul>li>a:focus,
+.menuMore>ul>li:hover>a,
+.menuMore>ul>li>a:focus,
+.megaMenu>ul>li:hover>a,
+.megaMenu>ul>li>a:focus{background:#000;color:#ff4;outline:none;}
+
+/* menu2p, menuMore */
+.menu2p ul ul,
+.menuMore ul ul{display:none;width:158px;font-size:16px;line-height:1.4;padding:0;position:absolute;top:auto;left:0;border:1px solid #888;text-align:left;box-shadow:rgba(0,0,0,0.4) 0 5px 14px;}
+.menu2p>ul>li>a{ min-width: 123px;}
+.menu2p li li,
+.menuMore li li{position:relative;float:none;border-top:1px solid #ccc;}
+.menu2p li li:first-child,
+.menuMore li li:first-child{border:none;}
+.menu2p li li a,
+.menuMore li li a{position:relative;padding:12px 12px 11px;height:auto;width:auto;background:#fff;color:#555;text-align:left;}
+.menu2p ul ul ul,
+.menuMore ul ul ul{top:0;left:158px;margin-top:-1px;}
+.menu2p li li:hover>a,
+.menu2p li li>a:focus,
+.menuMore li li:hover>a,
+.menuMore li li>a:focus{background-color:#0984a3;color:#fff;outline:none;}
+.menu2p li li.hasChild>a,
+.menuMore li li.hasChild>a{padding-right:20px;}
+.menu2p li li.hasChild>a:after,
+.menuMore li li.hasChild>a:after{content:'';position:absolute;right:10px;top:17px;width:9px;height:9px;border:3px solid #ac0;transform:rotate(45deg);border-bottom:none;border-left:none;}
+.menu2p li li.hasChild>a:hover:after,
+.menu2p li li.hasChild>a:focus:after,
+.menuMore li li.hasChild>a:hover:after,
+.menuMore li li.hasChild>a:focus:after{border-color:#df0;}
+.menu2p li.hasChild>ul,
+.menuMore li.hasChild>ul{z-index:999;}
+/* -------------------------------------------------------------------------------- */
+
+
+/*menuMoreCtrl*/
+/* -------------------------------------------------------------------------------- */
+.menuMoreCtrl{
+  position:absolute;right:0;top:0;cursor:pointer;border:none;padding:0;margin:0;
+  width:60px;height:60px;font-size:0;
+  background:#000 url(../images/menuMore.png) no-repeat center center;
+}
+.menuMoreCtrl:hover,
+.menuMoreCtrl:focus{background-color:#ffa300}
+
+.megaMenu .menuMoreCtrl,
+.no-js .menuMoreCtrl{display:none;}
+.no-js .header .menu2p>ul>li a{width:auto;padding-left:1em;padding-right:1em;border-bottom:solid 1px #666;}
+.no-js .header .menu2p>ul{height:auto;background:#383838;width:100%;overflow:hidden;}
+
+.menuMore{display:none;position:absolute;left:auto;right:0;border-top:solid 1px #666;box-shadow:rgba(0,0,0,.6) 0 2px 15px;background:rgba(0,0,0,.8);}
+.menuMore ul{list-style:none;margin:0;padding:0;}
+.menuMore li{margin:0;padding:0;}
+.menuMore>ul{font-size:18px;line-height:60px;}
+.menuMore>ul>li{display:block !important;float:left;border-right:solid 1px #666;position:relative;}
+.menuMore>ul>li a{display:block;height:60px;width:159px;background:#383838;color:#fff;text-align:center;transition:all .3s;}
+.menuMore li a:hover{background:#000;}
+.menuMore ul ul{display:none;width:158px;font-size:16px;line-height:1.4;padding:0;position:absolute;top:auto;left:0;border:1px solid #888;text-align:left;box-shadow:rgba(0,0,0,0.4) 0 5px 14px;}
+.menuMore li li{position:relative;float:none;border-top:1px solid #ccc;}
+.menuMore li li:first-child{border:none;}*/
+.menuMore li li a{padding:12px 12px 11px;height:auto;width:auto;background:#fff;color:#555;text-align:left;}
+.menuMore li li.hasChild>a{padding-right:20px;background-image:url(../images/menu_hasChild.png);background-repeat:no-repeat;background-position:140px 15px;}
+.menuMore ul ul ul{top:0;left:158px;margin-top:-1px;}
+.menuMore li li a:hover,
+.menuMore li li a:focus{background-color:#0984a3;color:#fff;outline:none;}
+/* -------------------------------------------------------------------------------- */
+
+
+
+/* megaMenu */
+/* -------------------------------------------------------------------------------- */
+.megaMenu>ul>li{position:static;}
+.megaMenu ul ul{line-height:1.4;}
+.megaMenu>ul>li>ul{display:none;overflow:visible;position:absolute;top:auto;left:50%;text-align:left;margin-top:0;width:92%;padding:.6em 2%;margin-left:-48%;box-shadow:rgba(0,0,0,0.4) 0 2px 12px;background:#fff}
+.megaMenu>ul>li>ul>li{display:inline-block;width:24%;margin:4px .1% .7em;vertical-align:top;border:1px solid #bbb;}
+.megaMenu li li.hasChild>a{padding-right:32px;}
+.megaMenu li li.hasChild>a:after{content:'';position:absolute;right:14px;top:.7em;width:12px;height:12px;border:3px solid #ac0;transform:rotate(135deg);border-bottom:none;border-left:none;}
+.megaMenu li li.hasChild>a:hover:after,
+.megaMenu li li.hasChild>a:focus:after{border-color:#df0;}
+.megaMenu li li li.hasChild>a:after{display:none;}
+.megaMenu li li a{position:relative;padding:.6em .8em;}
+.megaMenu li li a:hover,
+.megaMenu li li a:focus{background:#0984a3;color:#fff;outline:none;}
+.megaMenu li li li a{border-top:1px dotted #ccc;padding:.6em 1em .6em 2em;text-indent:-1em;}
+.megaMenu li li li a:before{content:'';display:inline-block;width:.5em;height:.5em;background:#888;vertical-align:top;margin:.45em .5em 0 0;}
+.megaMenu li li li a:hover:before,
+.megaMenu li li li a:focus:before{background:#df0;}
+.megaMenu ul ul ul{display:block;position:static;width:100%;margin:0;font-size:.9em;}
+.megaMenu ul ul ul ul{display:none;}
+/* -------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1000px){
+  .menu2p, .menuMoreCtrl, .megaMenu, .header .menu {display: none;}
+}
