@@ -1,0 +1,66 @@
+/* .path（瀏覽路徑 或 現在位置）＋ .function（列印、轉寄、返回） */
+/* -------------------------------------------------------------------------------- */
+.friendly{display:none;}
+@media (min-width:1001px){
+	.friendly{display:block;clear:both;margin:12px;overflow:hidden;}
+
+	.path{color:#65787b;}
+	.path .before{padding-right:15px;margin-right:8px;background:url(../images/path.png) no-repeat right center;}
+	.path a{text-decoration:none;color:#000;}
+	.path a:hover,
+	.path a:focus{text-decoration:underline;}
+
+	.function{overflow:hidden;_width:100%;margin:-18px 0 0;padding:0 4px 0 0;float:right;}
+	.function ul{list-style:none;margin:0;padding:0;float:right;font-size:13px;line-height:1;}
+	.function li{position:relative;float:left;padding:18px 0 0;margin:0 0 0 5px;height:50px;}
+  .function li a {
+    display: block;width: 44px;height: 44px;border-radius: 50%;
+    text-decoration: none;outline: none;text-indent: -3000px;
+    border: 1px solid #0984a3;
+    background: #0984a3 url(../images/function.png) no-repeat center 0;
+    transition: background-color .3s;
+  }	
+  .function li a:hover,
+	.function li a:focus{background-color:#fff;box-shadow:#0984a3 0 0 4px;}
+	.function .print{background-position:center 3px;}
+	.function .forward{background-position:center -47px;}
+	.function .back{background-position:center -96px;}
+	.function .print:hover,
+	.function .print:focus{background-position:center -147px;}
+	.function .forward:hover,
+	.function .forward:focus{background-position:center -197px;}
+	.function .back:hover,
+	.function .back:focus{background-position:center -246px;}
+  .function a::before {
+    display: block; z-index: -1;
+    position: absolute;top: 24px;width: 44px;height: 1.1em;
+    text-indent: 0;text-align: center;
+    color: #fff;
+    transition: top .3s, color .3s;
+  }	
+  .function .print::before{content:'列印';}
+	.function .forward::before{content:'轉寄';}
+	.function .back::before{content:'返回';}
+	.function a:hover::before,
+	.function a:focus::before{color:#899094;top:1px;background:#fff;}
+	.function .bopomofo a,
+  .function .read a {
+    background: #8cb7b1 url(../images/function2.png) no-repeat center 0;
+    background-size: 44px auto;
+    border-color: #8cb7b1;
+  }	
+  .function .read a{background-position:center -68px;}
+	.function .bopomofo a:hover,
+	.function .read a:hover,
+	.function .bopomofo a:focus,
+  .function .read a:focus {
+    background-color: #0984a3;
+    border-color: #0984a3;
+    box-shadow: #0984a3 0 0 0 2px;
+  }	
+  .function .bopomofo a::before{content:'注音';}
+	.function .read a::before{content:'朗讀';}
+
+	.no-js .function li{height:auto}
+	.no-js .function li a{display:inline-block; vertical-align:top;}
+}

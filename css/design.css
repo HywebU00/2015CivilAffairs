@@ -1,11 +1,14 @@
 @charset "UTF-8";
 /* CSS Document:台中市政府民政局; */
 @import url("default.css");
-@import url("header.css");
-@import url("menu.css"); /* 寬版選單 */
-@import url("search.css");
-@import url("footer.css");
-@import url("sidebar.css");
+@import url("header.css");/* 2025 */
+@import url("menu.css"); /* 2025 寬版選單 */
+@import url("search.css");/* 2025 */
+@import url("footer.css");/* 2025 */
+@import url("sidebar.css");/* 2025 行動版側欄 */
+@import url("navi.css");/* 2025 行動版內頁標題＋返回箭頭 */
+@import url("friendly.css");/* 2025 瀏覽路徑＋列印、轉寄、返回 */
+@import url("pageHeader.css");/* 2025 內頁標題（寬版） */
 @import url("mp.css");
 @import url("thumbnail.css");
 @import url("lp.css");

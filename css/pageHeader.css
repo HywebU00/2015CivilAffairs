@@ -1,0 +1,13 @@
+/* 內頁標題（寬版） */
+/* -------------------------------------------------------------------------------- */
+.center>header{margin:0 12px;padding:0 0 8px;}
+.center>header>h1{font-size:1.8em;display:inline-block;line-height:1.4;}
+.center>header .rss{float:right;font-size:0;margin-top:-25px;}
+.center>header .rss a{display:block;width:52px;height:24px;line-height:24px;background:#fff url(../images/rss.png) no-repeat center center;border-radius:5px;border:1px solid #afbbc2;}
+.center>header .rss a:hover,
+.center>header .rss a:focus{outline:none;border-color:#666;box-shadow:rgba(0,0,0,.6) 0 0 3px;}
+.center>header ul{list-style:none;margin:6px 0 3px;padding:0;color:#65787b;}
+.center>header li{margin:0 1em .4em  0;padding:0;display:inline-block;}
+.center>header li em{color:#444;font-weight:normal;}
+.center>header+p:empty{display:none;}
+/* -------------------------------------------------------------------------------- */
